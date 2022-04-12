@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Level1";
+}
+<style>
+    input[type="text"] {
+        outline-style: none;
+        border: solid #000000 1px;
+        border-radius: 8px;
+        padding: 7px 7px;
+        width: 180px;
+        font-size: 24px;
+        font-family: MingLiU;
+        text-align: center
+    }
+
+    input[type="button"] {
+        background: #f0f0f0;
+        background-image: -webkit-linear-gradient(top, #f0f0f0, #ffffff);
+        background-image: -moz-linear-gradient(top, #f0f0f0, #ffffff);
+        background-image: -o-linear-gradient(top, #f0f0f0, #ffffff);
+        background-image: linear-gradient(to bottom, #f0f0f0, #ffffff);
+        border-radius: 8px;
+        font-family: MingLiU;
+        color: #000000;
+        font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        border: solid #000000 1px;
+        text-decoration: none;
+    }
+</style>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="jumbotron">
+    <br />
+    <center>
+        <label style="font-size: 120px; font-weight: 100; font-family:'Courier New'; ">Level 1</label>
+        <br /><br /><br /><br /><br />
+        <input type="text" id="answer" name="answer" value="">
+        <br /><br />
+        <input type="button" value="確定" onclick="AnsCheck()">
+    </center>
+</div>
+
+<br />
+<center><h3><label id="lblEmp" style="color:red;"> </label></h3></center>
+<br />
+
+<script>
+    function AnsCheck() {
+        if (answer.value == "答案") {
+            location = "Level2"
+        }
+        else {
+            let lbl = document.getElementById('lblEmp');
+            let empName = '答案錯誤'
+
+            lbl.innerText = empName;
+        }
+    }
+</script>

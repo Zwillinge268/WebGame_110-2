@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "主頁";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #696969;
+            border: none;
+            color: #dcdcdc;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+    </style>
+</head>
+<body>
+    <br /><br /><br /><br /><br />
+    <center>
+        <h1 style="font-size:300%;">歡迎遊玩本解密遊戲</h1>
+        <br /><br />
+        <h1 style="font-size:300%;">準備好了就點擊下面按鈕開始遊戲吧！</h1>
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
+        <button class="button" style="vertical-align:middle" onclick="location='/Puzzle/Level1'"><span>開始遊戲</span></button>
+    </center>
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+</body>
+</html>
